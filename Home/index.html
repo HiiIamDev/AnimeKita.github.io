@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Anime Kita</title>
+        <script>
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "250px";
+                document.getElementById("main").style.marginLeft = "250px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+                document.getElementById("main").style.marginLeft= "0";
+            }
+        </script>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+
+            /*Background*/
+
+            .BG {
+                padding-top: 20px;
+                height: 800px;
+                background-image: url(/Assets/BG.jpg);
+                transition: margin-left .5s;
+
+            }
+
+            /*navbar*/
+
+            ul {
+                list-style-type: none;
+                margin: 0%;
+                overflow: hidden;
+                position: fixed;
+                top: 0;
+                padding-right: 250px;
+                background-image: url(/Assets/headerbg.png);
+                padding: 30px;
+                width: 100%;
+            }
+
+            ul li {
+                float: left;
+                padding-left: 16em;
+            }
+
+            ul li a {
+                text-decoration: none;
+                color: aliceblue;
+                transition: 1s;
+            }
+
+            ul li a:hover {
+                color:aqua;
+            }
+
+            /*Sidenav*/
+            .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: white;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: cyan;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+        .homeNav {
+            padding-right: 40px;
+        }
+
+        /*Search / Action*/
+        .search-Anime {
+            margin-top: 160px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            margin-right: 30px;
+        }
+
+        .search-Anime input {
+            width: 200px;
+            padding: 15px 15px 15px 15px;
+            border-radius: 15px;
+            color: white;
+            background-color: rgb(39, 39, 39);
+            border: none;
+            transition: width 0.4s ease-in-out;
+        }
+
+        .search-Anime input:focus {
+            width: 300px;
+        }
+        
+
+
+        </style>
+    </head>
+    <body>
+        <div class="BG" id="main">
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#" title="Petualangan">Adventure</a>
+                <a href="#" title="Hal Berbau 18+">Ecchi</a>
+                <a href="#" title="Romantis">Romance</a>
+                <a href="#" title="Olahraga">Sport</a>
+                <a href="#" title="Game">Game</a>
+                <a href="#" title="Drama">Drama</a>
+                <a href="#" title="Aksi (Adu Jotos, Parkour DLL)">Action</a>
+                <a href="#" title="Komedi">Comedy</a>
+                <a href="#" title="Fantasi">Fantasy</a>    
+                <a href="#more.">More Genre...</a>
+            </div>
+            <div class="navBar">
+                <ul>
+                    <li>
+                        <a href="#home" class="HomeNav">Home</a>
+                    </li>
+                    <li>
+                        <a href="#genre" onclick="openNav()">Genre</a>
+                    </li>
+                    <li>
+                        <a href="#populer">Populer</a>
+                    </li>
+                    <li>
+                        <a href="#recomended">Rekomendasi</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="search-Anime">
+                <h1>Anime Kita</h1> <br> <br>
+                <br>
+                <input type="search">
+            </div>
+        </div>
+    </body>
+</html>
